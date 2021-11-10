@@ -35,5 +35,5 @@ couleur text mise en avant : `white`
 
 ## Authors
 
-Alexis MARTIN - https://github.com/AlexisMartin44\
+Alexis MARTIN - https://github.com/AlexisMartin44 \
 Ulysse VINCENTI - https://github.com/joaquimelerebel
