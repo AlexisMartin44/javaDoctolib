@@ -1,0 +1,89 @@
+SELECT DISTINCT u.ID, u.NAME, u.F_NAME, u.EMAIL, u.GENDER, u.HANDICAPPED, u.DOCTOR
+FROM USER u, EVENT e
+WHERE u.DOCTOR = 1
+AND u.ID = e.DOCTOR_ID
+AND NOT( ( e.DATE_S >= 11/18/2020 01:01:00  AND e.DATE_S <= 11/18/2020 01:03:00)
+OR ( e.DATE_S <= 11/18/2020 01:01:00  AND e.DATE_E >= 11/18/2020 01:03:00) 
+OR ( e.DATE_E >= 11/18/2020 01:01:00  AND e.DATE_E <= 11/18/2020 01:03:00) )
+
+
+SELECT DISTINCT u.ID, u.NAME, u.F_NAME, u.EMAIL, u.GENDER, u.HANDICAPPED, u.DOCTOR
+FROM USER u, EVENT e
+WHERE u.DOCTOR = 1 AND (
+( AND u.ID = e.DOCTOR_ID
+AND NOT( ( e.DATE_S >= "11/18/2020 01:01:00"  AND e.DATE_S <= "11/18/2020 01:03:00")
+OR ( e.DATE_S <= "11/18/2020 01:01:00"  AND e.DATE_E >= "11/18/2020 01:03:00") 
+OR ( e.DATE_E >= "11/18/2020 01:01:00"  AND e.DATE_E <= "11/18/2020 01:03:00") ) )
+
+OR ( u.ID IN (SELECT DOCTOR_ID
+				FROM USER u
+				LEFT JOIN EVENT e ON e.DOCTOR_ID = u.ID
+				WHERE e.DOCTOR_ID = null ) )
+)
+
+
+
+
+SELECT DISTINCT
+    u.ID,
+    u.NAME,
+    u.F_NAME,
+    u.EMAIL,
+    u.GENDER,
+    u.HANDICAPPED,
+    u.DOCTOR
+FROM
+    USER u,
+    EVENT e
+WHERE
+    u.DOCTOR = 1 AND(
+        (
+            u.ID = e.DOCTOR_ID AND NOT(
+                (
+                    e.DATE_S >= "11/18/2020 01:01:00" AND e.DATE_S <= "11/18/2020 01:03:00"
+                ) OR(
+                    e.DATE_S <= "11/18/2020 01:01:00" AND e.DATE_E >= "11/18/2020 01:03:00"
+                ) OR(
+                    e.DATE_E >= "11/18/2020 01:01:00" AND e.DATE_E <= "11/18/2020 01:03:00"
+                )
+            )
+        ) OR(
+            u.ID IN(
+            SELECT ID FROM USER WHERE ID NOT IN (SELECT DOCTOR_ID FROM EVENT)
+        )
+        )
+    )
+
+    SELECT DISTINCT
+    u.ID,
+    u.NAME,
+    u.F_NAME,
+    u.EMAIL,
+    u.GENDER,
+    u.HANDICAPPED,
+    u.DOCTOR
+FROM
+    USER u
+LEFT JOIN
+
+WHERE
+    u.DOCTOR = 1 AND(
+        (
+            u.ID = e.DOCTOR_ID AND NOT(
+                (
+                    e.DATE_S >= "11/18/2020 01:01:00" AND e.DATE_S <= "11/18/2020 01:03:00"
+                ) OR(
+                    e.DATE_S <= "11/18/2020 01:01:00" AND e.DATE_E >= "11/18/2020 01:03:00"
+                ) OR(
+                    e.DATE_E >= "11/18/2020 01:01:00" AND e.DATE_E <= "11/18/2020 01:03:00"
+                )
+            )
+        ) OR(
+            u.ID NOT IN(
+            SELECT
+                DOCTOR_ID
+            FROM EVENT
+            )
+        )
+        )
+  

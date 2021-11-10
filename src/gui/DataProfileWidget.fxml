@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="465.0" prefWidth="723.0" styleClass="blue-wallpaper" stylesheets="@../../rsc/general.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DataProfileWidgetController">
+   <center>
+      <Accordion BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" text="Past appointments">
+               <content>
+                  <ScrollPane fitToWidth="true">
+                     <content>
+                        <VBox fx:id="vbox_pastAppointments" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+          <TitledPane animated="false" text="Future appointments">
+               <content>
+                  <ScrollPane>
+                     <content>
+                        <VBox fx:id="vbox_futureAppointments" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+            <TitledPane prefHeight="200.0" prefWidth="200.0" text="Statistics">
+               <content>
+                  <ScrollPane>
+                     <content>
+                        <VBox fx:id="vbox_stats" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </center>
+</BorderPane>

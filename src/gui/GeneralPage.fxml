@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="828.0" prefWidth="787.0" styleClass="border-pane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GeneralPageController">
+	<center>
+		<TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+			<tabs>
+				<Tab text="Calendar">
+					<content>
+                  <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <center>
+								<SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" BorderPane.alignment="CENTER">
+									<items>
+                              <BorderPane fx:id="calendarPlaceHolder" styleClass="blue-wallpaper" />
+                              <BorderPane fx:id="meetingSpecPlaceHolder" styleClass="blue-wallpaper" />
+									</items>
+								</SplitPane>
+                     </center>
+                  </BorderPane>
+					</content>
+				</Tab>
+				<Tab text="Notification">
+	               <content>
+	                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+	                     <center>
+	                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+	                          <items>
+	                              <BorderPane fx:id="notifListPlaceHolder" styleClass="blue-wallpaper" />
+	                              <BorderPane fx:id="notifSpecPlaceHolder" styleClass="blue-wallpaper" />
+	                          </items>
+	                        </SplitPane>
+	                     </center>
+	                     </BorderPane>
+	               </content>
+				</Tab>
+				<Tab text="Profil">
+					<content>
+						<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+	                     <center>
+	                     	<SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+	                     		<items>
+	                        		<BorderPane fx:id="profilePlaceHolder" />
+	                        		<BorderPane fx:id="dataProfilePlaceHolder"/>
+	                        	</items>
+	                        </SplitPane>	        
+	                     </center>
+	                  </BorderPane>
+					</content>
+				</Tab>
+				<Tab text="Stats">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</center>
+	<top>
+      <BorderPane minWidth="787.0" BorderPane.alignment="CENTER">
+         <left>
+            <ImageView fitHeight="27.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../rsc/logo_simple.png" />
+               </image>
+            </ImageView>
+         </left>
+         <right>
+      		<HBox alignment="TOP_RIGHT" prefHeight="27.0" prefWidth="787.0" spacing="30.0" BorderPane.alignment="CENTER">
+      			<children>
+                  <ImageView fitHeight="26.0" fitWidth="33.0" onMouseClicked="#reload" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../rsc/reload.png" />
+                     </image>
+                  </ImageView>
+      				<Label fx:id="lblId" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="24.0" prefWidth="188.0" text="USERNAME" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+      				<Label alignment="TOP_RIGHT" contentDisplay="RIGHT" onMouseClicked="#logOut" prefHeight="27.0" prefWidth="85.0" text="log out" textFill="#487aa5">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+      			</children>
+      		</HBox>
+         </right>
+      </BorderPane>
+	</top>
+   <stylesheets>
+      <URL value="@../../rsc/tabs.css" />
+      <URL value="@../../rsc/general.css" />
+   </stylesheets>
+</BorderPane>

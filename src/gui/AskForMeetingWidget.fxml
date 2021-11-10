@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane styleClass="blue-wallpaper" stylesheets="@../../rsc/general.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AskForMeetingWidgetController">
+   <center>
+		<SplitPane dividerPositions="0.5845070422535211" prefHeight="390.0" prefWidth="712.0" BorderPane.alignment="CENTER">
+			<items>
+            <BorderPane styleClass="blue-wallpaper">
+               <center>
+						<VBox prefHeight="390.0" prefWidth="415.0" spacing="10.0" BorderPane.alignment="CENTER">
+							<children>
+								<HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0" styleClass="blue-wallpaper">
+									<children>
+										<Label text="Meeting Specification" textFill="#143275" />
+										<Button mnemonicParsing="false" onAction="#send" text="Send" textFill="WHITE" />
+									</children>
+								</HBox>
+								<Label text="Title" textFill="#143275" />
+								<TextField fx:id="txtFtitle" />
+								<Label text="Sarting hour and day" textFill="#143275" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+      								<DatePicker fx:id="datePickerS" onMouseClicked="#click" prefWidth="198.0" promptText="Date " />
+      								<Label fx:id="lblHourS" onMouseClicked="#upHS" prefHeight="40.0" prefWidth="60.0" text="00:00" textFill="#143275">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <HBox prefHeight="40.0" prefWidth="37.0">
+                                 <children>
+                                    <VBox prefHeight="40.0" prefWidth="37.0">
+                                       <children>
+                                          <Polygon fill="#59a0dc" onMouseClicked="#upHS" points="28.0, 77.0, 42.0, 62.0, 12.0, 62.0" rotate="180.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </Polygon>
+                                          <Polygon fill="#59a0dc" onMouseClicked="#downHS" points="26.0, 77.0, 42.0, 62.0, 12.0, 62.0" stroke="#ffffff00" strokeType="INSIDE" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="40.0" prefWidth="66.0">
+                                 <children>
+                                    <VBox prefHeight="40.0" prefWidth="39.0">
+                                       <children>
+                                          <Polygon fill="#59a0dc" onMouseClicked="#upMS" points="26.0, 77.0, 42.0, 62.0, 12.0, 62.0" rotate="180.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </Polygon>
+                                          <Polygon fill="#59a0dc" onMouseClicked="#downMS" points="26.0, 77.0, 42.0, 62.0, 12.0, 62.0" stroke="#ffffff00" strokeType="INSIDE" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+								<Label text="Ending hour and day" textFill="#143275" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+      								<DatePicker fx:id="datePickerE" onMouseClicked="#click" promptText="Date " />
+                              <Label fx:id="lblHourE" prefHeight="40.0" prefWidth="59.0" text="00:00" textFill="#143275">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <VBox prefHeight="40.0" prefWidth="36.0">
+                                 <children>
+                                    <Polygon fill="#59a0dc" onMouseClicked="#upHE" points="26.0, 77.0, 42.0, 62.0, 12.0, 62.0" rotate="180.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </Polygon>
+                                    <Polygon fill="#59a0dc" onMouseClicked="#downHE" points="26.0, 77.0, 42.0, 62.0, 12.0, 62.0" stroke="#ffffff00" strokeType="INSIDE" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="40.0" prefWidth="33.0">
+                                 <children>
+                                    <Polygon fill="#59a0dc" onMouseClicked="#upME" points="26.0, 77.0, 42.0, 62.0, 12.0, 62.0" rotate="180.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </Polygon>
+                                    <Polygon fill="#59a0dc" onMouseClicked="#downME" points="26.0, 77.0, 42.0, 62.0, 12.0, 62.0" stroke="#ffffff00" strokeType="INSIDE" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox fx:id="vboxMeetingInfo" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+      								<Label text="Symptoms" textFill="#143275" />
+      								<TextArea fx:id="txtArSymptoms" prefHeight="332.0" prefWidth="415.0" />
+      								<Label text="Notes" textFill="#143275" />
+      								<TextArea fx:id="txtArNotes" prefHeight="200.0" prefWidth="200.0" />
+                              <ChoiceBox fx:id="choiceBoxAvailableDoc" prefWidth="150.0" visible="false" />
+                           </children>
+                        </VBox>
+							</children>
+						</VBox>
+               </center>
+            </BorderPane>
+            <BorderPane styleClass="blue-wallpaper">
+               <center>
+						<SplitPane fx:id="splitPaneH" dividerPositions="0.30569948186528495" orientation="VERTICAL" prefHeight="390.0" prefWidth="292.0" BorderPane.alignment="CENTER">
+							<items>
+                        <BorderPane styleClass="blue-wallpaper">
+                           <center>
+										<VBox prefHeight="200.0" prefWidth="292.0" spacing="20.0" BorderPane.alignment="CENTER">
+											<children>
+												<ChoiceBox fx:id="choiceBoxLocation" prefWidth="150.0" />
+												<HBox prefHeight="200.0" prefWidth="212.0">
+													<children>
+														<Label contentDisplay="CENTER" prefHeight="16.0" prefWidth="113.0" text="adress :" textFill="#143275" />
+														<Label fx:id="lblAdress" contentDisplay="CENTER" prefHeight="16.0" prefWidth="184.0" textFill="#143275" />
+													</children>
+												</HBox>
+											</children>
+										</VBox>
+                           </center>
+                        </BorderPane>
+                        <BorderPane styleClass="blue-wallpaper">
+                           <center>
+										<WebView fx:id="WebViewMaps" prefHeight="200.0" prefWidth="295.0" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
+							</items>
+						</SplitPane>
+               </center>
+            </BorderPane>
+			</items>
+		</SplitPane>
+   </center>
+</BorderPane>

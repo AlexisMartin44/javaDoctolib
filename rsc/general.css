@@ -1,0 +1,124 @@
+.button{
+	-fx-background-color:	#62aff0;
+	-fx-text-inner-color:  	white;
+}
+.button:hover{
+	-fx-background-color:	#59a0dc;
+}
+.button:focused{
+	-fx-background-color:	#59a0dc;
+}
+
+.text-field{
+	-fx-text-inner-color:  	white;
+	-fx-background-color:	#62aff0;
+	-fx-prompt-text-fill:	#e2e2e2;
+}
+.text-field:hover{
+	-fx-background-color:	#59a0dc;
+}
+.text-field:focused{
+	-fx-text-inner-color:  	white;
+	-fx-background-color:	#59a0dc;
+	-fx-prompt-text-fill:	#59a0dc;
+}
+
+.check-box .box {
+	-fx-background-color: 	#83c1f5;
+	-fx-border-color:		#487aa5;
+	-fx-border-radius:		5px; 
+}
+.check-box:selected .mark {
+	-fx-background-color: 	#487aa5;
+}
+
+.check-box:selected .box {
+	-fx-background-color: 	#62aff0;
+}
+
+
+.choice-box{
+	-fx-background-color: 	#62aff0;
+}
+.choice-box .context-menu { 
+	-fx-background-color: 	#62aff0;
+}
+.choice-box .menu-item:focused { 
+	-fx-background-color: 	#59a0dc;
+}
+.choice-box .menu-item > .label {
+	-fx-text-fill: white;
+}
+.choice-box .menu-item:focused > .label {
+	-fx-text-fill: white;
+}
+
+.text-area .content{
+	-fx-text-inner-color:  	white;
+	-fx-background-color:	#62aff0;
+	-fx-prompt-text-fill:	#e2e2e2;
+}
+.text-area:hover .content{
+      -fx-background-color: #59a0dc;
+}
+.text-area:focused{
+	-fx-text-inner-color:  	white;
+	-fx-background-color:	#59a0dc;
+	-fx-prompt-text-fill:	#59a0dc;
+}
+
+
+.blue-wallpaper{
+	-fx-background-color: #83c1f5;
+}
+.black-wallpaper{
+	-fx-background-color: black;
+}
+.pink-wallpaper{
+	-fx-background-color: #e637c8;
+}
+.rightofcalendar{
+	-fx-background-color: #83c1f5;
+}
+.day-square{
+	-fx-background-color: 	#8bb9df;
+}
+.clandar{
+	-fx-background-color: 	#96caf5;
+}
+
+.clandar Line{
+	-fx-background-color: 	#96caf5;
+	-fx-stroke   : white;
+}
+.date-picker{
+	-fx-background-color: 	#62aff0;
+}
+.date-picker:hover{
+	-fx-background-color: 	#59a0dc;
+}
+.date-picker > .text-field{
+	-fx-text-fill: 			white;
+	-fx-prompt-text-fill:	white;
+}
+.layout{
+	-fx-text-fill: 			white;
+}
+
+.error{
+	-fx-text-fill: 			white;
+	-fx-background-color: 	#d945cf;
+	-fx-background-radius: 10 10 10 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+

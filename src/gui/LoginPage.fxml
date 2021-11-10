@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600" prefWidth="600" style="-fx-background-color: #83c1f5;" stylesheets="@../../rsc/general.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginPageController">
+	<center>
+		<VBox alignment="CENTER" prefHeight="600" prefWidth="379.0" spacing="10.0" BorderPane.alignment="CENTER">
+			<children>
+				<TextField fx:id="txtField_email" alignment="CENTER" maxHeight="34.0" maxWidth="300.0" minHeight="25.0" minWidth="100.0" prefHeight="34.0" prefWidth="300.0" promptText="email" stylesheets="@../application/application.css">
+	               <font>
+	                  <Font name="Noto Sans Arabic UI Light" size="15.0" />
+	               </font>
+               </TextField>
+				<PasswordField fx:id="pswField_password" alignment="CENTER" maxHeight="35.0" maxWidth="300.0" minHeight="25.0" minWidth="100.0" prefHeight="34.0" prefWidth="300.0" promptText="password">
+					<font>
+	                  <Font name="Noto Sans Arabic UI Light" size="15.0" />
+	               </font>
+               </PasswordField>
+				<Label fx:id="lblLoginError" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="207.0" styleClass="error" text="LOGIN FAILED" textAlignment="CENTER" visible="false" />
+				<HBox alignment="CENTER" prefHeight="32.0" prefWidth="683.0" spacing="10.0">
+					<children>
+						<Button fx:id="btnLogin" mnemonicParsing="false" onAction="#login" onMouseEntered="#log_hover" onMouseExited="#log_stopHover" text="Login" textFill="WHITE" />
+						<Button fx:id="btnReg" mnemonicParsing="false" onAction="#register" onMouseEntered="#reg_hover" onMouseExited="#reg_stopHover" text="Register" textFill="WHITE" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</center>
+   <top>
+      <ImageView fitHeight="194.0" fitWidth="393.0" pickOnBounds="true" preserveRatio="true" translateY="80.0" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../rsc/logo_symbol.png" />
+         </image>
+      </ImageView>
+   </top>
+</BorderPane>

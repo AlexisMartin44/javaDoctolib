@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="465.0" prefWidth="723.0" styleClass="blue-wallpaper" stylesheets="@../../rsc/general.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CalendarWidgetController">
+	<center>
+		<VBox prefHeight="465.0" prefWidth="723.0" BorderPane.alignment="CENTER">
+			<children>
+						<GridPane fx:id="grid" gridLinesVisible="true" prefHeight="459.0" prefWidth="600.0" styleClass="clandar">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<children>
+                  <BorderPane styleClass="black-wallpaper">
+                     <center>
+										<Label alignment="CENTER" contentDisplay="CENTER" text="Monday" textFill="WHITE" textOverrun="CLIP" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane styleClass="black-wallpaper" GridPane.columnIndex="1">
+                     <center>
+										<Label alignment="CENTER" contentDisplay="CENTER" text="Tuesday" textFill="WHITE" textOverrun="CLIP" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane styleClass="black-wallpaper" GridPane.columnIndex="2">
+                     <center>
+										<Label alignment="CENTER" contentDisplay="CENTER" text="Wednesday" textFill="WHITE" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane styleClass="black-wallpaper" GridPane.columnIndex="3">
+                     <center>
+										<Label alignment="CENTER" contentDisplay="CENTER" text="Thursday" textFill="WHITE" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane styleClass="black-wallpaper" GridPane.columnIndex="4">
+                     <center>
+										<Label alignment="CENTER" contentDisplay="CENTER" text="Friday" textFill="WHITE" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane styleClass="black-wallpaper" GridPane.columnIndex="5">
+                     <center>
+										<Label alignment="CENTER" contentDisplay="CENTER" text="Saturday" textFill="WHITE" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane styleClass="black-wallpaper" GridPane.columnIndex="6">
+                     <center>
+										<Label alignment="CENTER" contentDisplay="CENTER" text="Sunday" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+							</children>
+						</GridPane>
+			</children>
+		</VBox>
+	</center>
+   <right>
+						<VBox prefHeight="465.0" prefWidth="125.0" style="-fx-background-color: #d0f1ff  #d0f1ff;" styleClass="rightofcalendar" BorderPane.alignment="CENTER">
+							<children>
+            <BorderPane prefHeight="77.0" prefWidth="125.0">
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="pink-wallpaper" BorderPane.alignment="CENTER">
+                     <children>
+            								<Label fx:id="lblYear" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" />
+            								<Label fx:id="lblMonth" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+								<ChoiceBox fx:id="cBoxMonth" prefWidth="150.0" />
+							</children>
+						</VBox>
+   </right>
+</BorderPane>
